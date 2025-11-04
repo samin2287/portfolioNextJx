@@ -2,9 +2,17 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { JetBrains_Mono } from "next/font/google";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-jetbrains",
 });
 
 const geistMono = Geist_Mono({
@@ -19,12 +27,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className="bg-gray-900"
-      > <Navbar/>
+    <html lang="en" className={jetbrains.variable}>
+      <body className="bg-gray-900">
+        {" "}
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );
