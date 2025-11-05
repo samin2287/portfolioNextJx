@@ -27,7 +27,7 @@ const SkillProgress = () => {
   return (
     <section id="skills">
       <Container className="py-20">
-        <div className=" bg-gray-900 text-white flex flex-wrap justify-between items-center gap-8">
+        <div className=" bg-gray-900 text-white flex flex-wrap justify-between items-center gap-6">
           {skills.map((skill, i) => (
             <SkillProgressCard
               key={i}

@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "./Container";
-import { FaFigma } from "react-icons/fa6";
+import { FaFigma, FaReact } from "react-icons/fa6";
 
 const Service = () => {
   return (
@@ -49,9 +49,9 @@ const Service = () => {
               </p>
             </div>
             <div className="flex flex-col items-center bg-gray-800 p-6 md:p-8 lg:p-10 rounded-2xl">
-              <FaFigma className="text-amber-600 text-6xl md:text-7xl lg:text-8xl font-bold" />
+              <FaReact className="text-amber-600 text-6xl md:text-7xl lg:text-8xl font-bold" />
               <h2 className="text-amber-600 text-2xl md:text-3xl lg:text-4xl font-bold py-4 md:py-5">
-                UI/UX Design
+              React Js
               </h2>
               <p className="text-gray-400 text-center text-sm md:text-base leading-6">
                 Lorem ipsum dolor sit amet. Imperdiet Lorem ipsum dolor sit amet
@@ -61,7 +61,7 @@ const Service = () => {
             <div className="flex flex-col items-center bg-gray-800 p-6 md:p-8 lg:p-10 rounded-2xl">
               <FaFigma className="text-amber-600 text-6xl md:text-7xl lg:text-8xl font-bold" />
               <h2 className="text-amber-600 text-2xl md:text-3xl lg:text-4xl font-bold py-4 md:py-5">
-                UI/UX Design
+               Next Js
               </h2>
               <p className="text-gray-400 text-center text-sm md:text-base leading-6">
                 Lorem ipsum dolor sit amet. Imperdiet Lorem ipsum dolor sit amet
@@ -71,7 +71,7 @@ const Service = () => {
             <div className="flex flex-col items-center bg-gray-800 p-6 md:p-8 lg:p-10 rounded-2xl">
               <FaFigma className="text-amber-600 text-6xl md:text-7xl lg:text-8xl font-bold" />
               <h2 className="text-amber-600 text-2xl md:text-3xl lg:text-4xl font-bold py-4 md:py-5">
-                UI/UX Design
+           JavaScript
               </h2>
               <p className="text-gray-400 text-center text-sm md:text-base leading-6">
                 Lorem ipsum dolor sit amet. Imperdiet Lorem ipsum dolor sit amet

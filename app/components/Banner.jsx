@@ -5,6 +5,7 @@ import Button from "./Button";
 import Image from "next/image";
 import "aos/dist/aos.css";
 
+
 const Banner = () => {
   return (
     <Container>
@@ -23,7 +24,7 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className="order-2 lg:order-1 lg:col-span-4 mt-4 lg:mt-20 text-center lg:text-left">
+          <div  className="  order-2 lg:order-1 lg:col-span-4 mt-4 lg:mt-20 text-center lg:text-left">
             <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl text-gray-500">
               Hi I am
             </h3>
@@ -38,7 +39,7 @@ const Banner = () => {
               <SocialLink />
             </div>
 
-            <div className="flex  md:flex-row gap-3 md:gap-5 py-4 lg:py-5 justify-center lg:justify-start pb-10">
+            <div  className="flex  md:flex-row gap-3 md:gap-5 py-4 lg:py-5 justify-center lg:justify-start pb-10">
               <Button className="w-full md:w-auto">Hire Me</Button>
               <Button className="w-full md:w-auto">Download CV</Button>
             </div>
@@ -54,18 +55,17 @@ const Banner = () => {
               </div>
               <div className="border-b-2 md:border-b-0 md:border-r-2 border-gray-400 pb-3 md:pb-0 md:pr-5 text-center md:text-left">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#FD6F00]">
-                  5+
+                  20+
                 </h2>
                 <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-300">
-                  Experiences
-                </p>
+Project done                </p>
               </div>
               <div className="text-center md:text-left">
                 <h2 className="text-2xl sm:text-3xl font-bold text-[#FD6F00]">
-                  5+
+            80+
                 </h2>
                 <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-300">
-                  Experiences
+            Happy Clients
                 </p>
               </div>
             </div>

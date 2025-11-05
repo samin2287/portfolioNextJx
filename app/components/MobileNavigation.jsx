@@ -21,7 +21,7 @@ const MobileNavigation = ({ activeSection }) => {
     const targetElement = document.getElementById(targetId);
 
     if (targetElement) {
-      const offsetTop = targetElement.offsetTop - 80; // Account for navbar height
+      const offsetTop = targetElement.offsetTop - 80; 
       window.scrollTo({
         top: offsetTop,
         behavior: "smooth",
@@ -55,7 +55,7 @@ const MobileNavigation = ({ activeSection }) => {
                 onClick={closeMenu}
                 className="p-1 bg-gray-900 rounded-md hover:bg-gray-700 border border-white/20 transition"
               >
-                <IoClose className="text-2xl text-gray-200 hover:text-green-500 transition-all duration-100" />
+                <IoClose className="text-2xl text-gray-200 hover:text-amber-500 transition-all duration-100" />
               </button>
             </div>
 
@@ -65,23 +65,23 @@ const MobileNavigation = ({ activeSection }) => {
                   key={item.title}
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
-                  className={`flex items-center gap-2 relative group py-3 px-4 text-sm text-white font-semibold hover:text-green-400 transition-all duration-100 ${
-                    activeSection === item.href ? "text-green-400" : ""
+                  className={`flex items-center gap-2 relative group py-3 px-4 text-sm text-white font-semibold hover:text-amber-500 transition-all duration-100 ${
+                    activeSection === item.href ? "text-amber-500" : ""
                   }`}
                 >
                   <span
                     className={`w-2.5 h-2.5 bg-gray-900 rounded-full border-2 inline-flex ${
                       activeSection === item.href
-                        ? "border-green-500"
-                        : "border-gray-400 group-hover:border-green-500"
+                        ? "border-amber-500"
+                        : "border-gray-400 group-hover:border-amber-500"
                     }`}
                   />
                   {item.title}
                   <span
                     className={`absolute w-full h-px left-0 -bottom-1 ml-4 duration-200 ${
                       activeSection === item.href
-                        ? "bg-green-500"
-                        : "bg-white/20 group-hover:bg-green-500"
+                        ? "bg-amber-500"
+                        : "bg-white/20 group-hover:bg-amber-500"
                     }`}
                   ></span>
                 </Link>

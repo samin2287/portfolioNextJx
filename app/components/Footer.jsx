@@ -28,7 +28,7 @@ const Footer = () => {
         ))}
       </div>
       <SocialLink />
-      <div className="flex items-center justify-between gap-10  border-b   border-t border-gray-700 pt-6 pb-4 w-full flex-wrap">
+      <div className="flex items-center justify-between gap-10  border-b  border-gray-700 pt-2 pb-10 w-full flex-wrap">
         <div className="flex gap-4 justify-center items-center ">
           <MdOutlineEmail className="text-gray-400" />
           <p className="text-gray-400 text-center leading-6 ">
@@ -42,7 +42,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <p className="text-gray-400 text-center leading-6 ">
+      <p className="text-gray-400 text-center leading-6 pb-5">
         Designed by @mahmood.fazile UI/UX designer
       </p>{" "}
     </Container>
