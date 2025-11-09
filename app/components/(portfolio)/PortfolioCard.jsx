@@ -7,7 +7,7 @@ const PortfolioCard = ({ projects }) => {
       {projects.map((project) => (
         <div
           key={project.id}
-          className="relative group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300">
+          className="relative group cursor-pointer bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300">
           {/* Image */}
           <img
             src={project.image}

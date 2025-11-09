@@ -69,31 +69,8 @@ export const portfolioData = {
       githubUrl: "https://github.com/username/web-project3",
       liveUrl: "https://web-project3-live.com",
     },
-    {
-      id: 4,
-      title: "Web Project 4",
-      category: "web",
-      image: "/project4.jpg",
-      githubUrl: "https://github.com/username/web-project4",
-      liveUrl: "https://web-project4-live.com",
-    },
-    {
-      id: 5,
-      title: "Web Project 5",
-      category: "web",
-      image: "/project5.jpg",
-      githubUrl: "https://github.com/username/web-project5",
-      liveUrl: "https://web-project5-live.com",
-    },
-    {
-      id: 6,
-      title: "Web Project 6",
-      category: "web",
-      image: "/project6.jpg",
-      githubUrl: "https://github.com/username/web-project6",
-      liveUrl: "https://web-project6-live.com",
-    },
-
+   
+    
     // App projects
     {
       id: 7,
@@ -119,30 +96,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/username/app-project3",
       liveUrl: "https://app-project3-live.com",
     },
-    {
-      id: 10,
-      title: "App Project 4",
-      category: "app",
-      image: "/project4.jpg",
-      githubUrl: "https://github.com/username/app-project4",
-      liveUrl: "https://app-project4-live.com",
-    },
-    {
-      id: 11,
-      title: "App Project 5",
-      category: "app",
-      image: "/project5.jpg",
-      githubUrl: "https://github.com/username/app-project5",
-      liveUrl: "https://app-project5-live.com",
-    },
-    {
-      id: 12,
-      title: "App Project 6",
-      category: "app",
-      image: "/project6.jpg",
-      githubUrl: "https://github.com/username/app-project6",
-      liveUrl: "https://app-project6-live.com",
-    },
+   
 
     // Design projects
     {
@@ -169,30 +123,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/username/web-project9",
       liveUrl: "https://web-project9-live.com",
     },
-    {
-      id: 16,
-      title: "Design Project 4",
-      category: "design",
-      image: "/project4.jpg",
-      githubUrl: "https://github.com/username/web-project10",
-      liveUrl: "https://web-project10-live.com",
-    },
-    {
-      id: 17,
-      title: "Design Project 5",
-      category: "design",
-      image: "/project5.jpg",
-      githubUrl: "https://github.com/username/web-project11",
-      liveUrl: "https://web-project11-live.com",
-    },
-    {
-      id: 18,
-      title: "Design Project 6",
-      category: "design",
-      image: "/project6.jpg",
-      githubUrl: "https://github.com/username/web-project12",
-      liveUrl: "https://web-project12-live.com",
-    },
+    
 
     // Branding projects
     {
@@ -219,29 +150,6 @@ export const portfolioData = {
       githubUrl: "https://github.com/username/web-project15",
       liveUrl: "https://web-project15-live.com",
     },
-    {
-      id: 22,
-      title: "Branding Project 4",
-      category: "branding",
-      image: "/project4.jpg",
-      githubUrl: "https://github.com/username/web-project16",
-      liveUrl: "https://web-project16-live.com",
-    },
-    {
-      id: 23,
-      title: "Branding Project 5",
-      category: "branding",
-      image: "/project5.jpg",
-      githubUrl: "https://github.com/username/web-project17",
-      liveUrl: "https://web-project17-live.com",
-    },
-    {
-      id: 24,
-      title: "Branding Project 6",
-      category: "branding",
-      image: "/project6.jpg",
-      githubUrl: "https://github.com/username/web-project18",
-      liveUrl: "https://web-project18-live.com",
-    },
+  
   ],
 };

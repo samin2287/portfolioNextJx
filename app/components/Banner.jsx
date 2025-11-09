@@ -28,11 +28,11 @@ const Banner = () => {
             <h3 className="font-semibold text-lg sm:text-xl lg:text-2xl text-gray-500">
               Hi I am
             </h3>
-            <h2 className="font-semibold text-xl sm:text-2xl lg:text-3xl text-gray-400 pt-2 lg:pt-3 pb-3 lg:pb-5">
-              Mahmood Fazile
+            <h2 className="font-semibold uppercase text-xl sm:text-2xl lg:text-3xl text-gray-400 pt-2 lg:pt-3 pb-3 lg:pb-5">
+           Zubayer Mahmud <span className="text-amber-600">Samin</span> 
             </h2>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#FD6F00]">
-              UI/UX designer
+            <h1 className="text-3xl  sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#FD6F00]">
+            Web  Developer
             </h1>
 
             <div className="flex justify-center lg:justify-start mt-4 lg:mt-0">

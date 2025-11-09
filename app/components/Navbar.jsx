@@ -43,7 +43,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="mt-5 relative z-50  top-0 left-0 w-full  bg-gray-900 shadow-md">
+    <nav className="mt-5 relative  z-50  top-0 left-0 w-full  bg-gray-900 shadow-md">
       <Container className="flex items-center justify-between py-1">
         <Image src="/main-logo.png" alt="logo" width={100} height={100} />
 
