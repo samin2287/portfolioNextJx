@@ -16,29 +16,35 @@ const Footer = () => {
         height={100}
         className="cursor-pointer"
       />
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4">
         {navItems.map((item) => (
           <Link
             key={item.title}
             href={item.href}
-            className="block py-2 cursor-pointer px-4 text-sm text-white hover:text-[#FD6F00] hover:rounded-md hover:bg-gray-100 font-semibold transition-all duration-100"
-          >
+            className="px-4 py-2 text-sm sm:text-base text-white font-semibold 
+                 rounded-md transition-all duration-200 
+                 hover:text-[#FD6F00] hover:bg-gray-700 cursor-pointer">
             {item.title}
           </Link>
         ))}
       </div>
       <SocialLink />
-      <div className="flex items-center justify-between gap-10  border-b  border-gray-700 pt-2 pb-10 w-full flex-wrap">
-        <div className="flex gap-4 justify-center items-center ">
-          <MdOutlineEmail className="text-gray-400" />
-          <p className="text-gray-400 text-center leading-6 ">
-            Mahmood.fazile7005@gmail.com{" "}
+      <div
+        className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-10 
+                border-b border-gray-700 pt-2 pb-10 w-full">
+        {/* Email */}
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center">
+          <MdOutlineEmail className="text-gray-400 text-lg sm:text-xl" />
+          <p className="text-gray-400 text-sm sm:text-base text-center sm:text-left leading-6">
+            Mahmood.fazile7005@gmail.com
           </p>
         </div>
-        <div className="flex gap-4 justify-center items-center ">
-          <MdOutlineCall className="text-gray-400" />
-          <p className="text-gray-400 text-center leading-6 ">
-            +93 729 107 005{" "}
+
+        {/* Call */}
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center">
+          <MdOutlineCall className="text-gray-400 text-lg sm:text-xl" />
+          <p className="text-gray-400 text-sm sm:text-base text-center sm:text-left leading-6">
+            +93 729 107 005
           </p>
         </div>
       </div>
