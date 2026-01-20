@@ -14,8 +14,10 @@ const AboutMe = () => {
           </h2>
 
           {/* Short Description */}
-          <p className="text-gray-400 text-center leading-6 py-5">
-            User Interface and User Experience design, and also video editing
+          <p className="  text-gray-400 text-center leading-6 py-5">
+            Creating modern, responsive, and engaging web experiences that are
+            visually appealing, <br /> user-friendly, and built for real-world
+            impact.
           </p>
 
           {/* Content */}
@@ -33,15 +35,15 @@ const AboutMe = () => {
 
             {/* Text Content */}
             <div className="w-full md:w-1/2 px-4 sm:px-6 md:px-8 lg:px-12 text-center md:text-start">
-              <p className="text-gray-400 leading-7 text-sm sm:text-base md:text-lg lg:text-xl max-w-4xl mx-auto md:mx-0">
-                A software engineer, the modern-day architect of digital realms,
-                navigates the ethereal landscapes of code, sculpting intangible
-                structures that shape our technological world. With fingers
-                poised over keyboards like virtuoso pianists, they compose
-                symphonies of logic, their minds a labyrinth of algorithms and
-                solutions. Their canvas is a screen, a vast expanse where lines
-                of code dance in intricate patterns, weaving the fabric of
-                digital experiences.
+              <p className="text-gray-400 leading-9 text-sm sm:text-base md:text-lg lg:text-xl max-w-4xl mx-auto md:mx-0">
+                I am a web developer skilled in React.js, Next.js, JavaScript,
+                HTML5, CSS3, Tailwind CSS, Bootstrap, Redux, and Webflow. I have
+                hands-on experience with various tools, including Visual Studio
+                Code, Git & GitHub, Figma, Vite/Webpack, NPM, Netlify, Vercel,
+                Microsoft Office, and Adobe Photoshop/Illustrator (basic). I
+                focus on responsive design, component-based architecture, API
+                integration, and UI/UX principles to build modern, user-friendly
+                web applications.
               </p>
 
               {/* Button */}
