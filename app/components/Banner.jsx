@@ -10,16 +10,19 @@ const Banner = () => {
     <Container>
       <section id="home">
         <div className="flex flex-col lg:grid lg:grid-cols-9 gap-4 lg:gap-4">
-          <div className="order-1 lg:order-2 lg:col-span-5 lg:col-start-5 pt-8 lg:pt-20 flex justify-center lg:justify-end items-center">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="order-1 lg:order-2 lg:col-span-5 lg:col-start-5 pt-8 lg:pt-20 flex justify-center lg:justify-end items-center">
             <div className="home-img flex justify-center items-center">
               <div className="img-box p-2 md:p-3 lg:p-4">
-                <div className="img-item w-36 h-36 sm:w-44 sm:h-44 md:w-52 md:h-52 lg:w-60 lg:h-60 relative overflow-hidden rounded-full">
+                <div className="img-item relative overflow-hidden rounded-full">
                   <Image
                     src="/profile.png"
                     alt="profile"
                     width={400}
                     height={400}
-                    className="object-cover"
+                    className="object-cover w-full h-full"
                     priority
                   />
                 </div>
@@ -27,8 +30,11 @@ const Banner = () => {
             </div>
           </div>
 
-          <div className=" home-info  order-2 lg:order-1 lg:col-span-4 mt-4 lg:mt-20 text-center lg:text-left">
-            <h3 className="font-semibold uppercase text-xl sm:text-2xl lg:text-3xl text-gray-400 pt-2 lg:pt-3 pb-3 lg:pb-5">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            className=" home-info  order-2 lg:order-1 lg:col-span-4 mt-4 lg:mt-20 text-center lg:text-left">
+            <h3 className="font-semibold uppercase text-xl sm:text-2xl lg:text-4xl text-gray-400 pt-2 lg:pt-3 pb-3 lg:pb-5">
               Zubayer Mahmud Samin
             </h3>
 
@@ -48,19 +54,48 @@ const Banner = () => {
               </span>
             </h2>
 
-            <div className="flex justify-center lg:justify-start mt-4 lg:mt-0">
+            <div className="flex justify-center lg:justify-start mt-6 lg:mt-6">
               <SocialLink />
             </div>
 
-            <div className="flex flex-row flex-wrap gap-3 md:gap-5 py-4 lg:py-5 justify-center lg:justify-start pb-10">
-              <Button className="px-5 sm:px-6 md:px-8">Hire Me</Button>
-              <Button className="px-5 sm:px-6 md:px-8">Download CV</Button>
-            </div>
             <div
+              className="
+    flex flex-row flex-wrap 
+    gap-3 sm:gap-4 md:gap-5 
+    justify-center lg:justify-start 
+    pb-10
+  ">
+              <Button
+                className="
+      px-5 sm:px-6 md:px-8 
+      bg-[#FD6F00] text-white 
+      hover:bg-[#ff8a33]
+      hover:shadow-lg hover:shadow-[#FD6F00]/40
+      hover:-translate-y-1
+      transition-all duration-300
+    ">
+                Hire Me
+              </Button>
+
+              <Button
+                className="
+      px-5 sm:px-6 md:px-8 
+      border border-[#FD6F00] 
+      text-[#FD6F00] bg-transparent
+      hover:bg-[#FD6F00] hover:text-white
+      hover:shadow-lg hover:shadow-[#FD6F00]/40
+      hover:-translate-y-1
+      transition-all duration-300
+    ">
+                Download CV
+              </Button>
+            </div>
+            {/* <div
               className="counter flex flex-row items-center justify-center 
                 gap-6 
-                px-4 md:px-8 py-4 bg-gray-800 rounded-xl">
-              {/* Experience */}
+                px-4 md:px-8 py-4 bg-gray-800 rounded-xl"
+            >
+              
               <div className="flex flex-col items-center md:items-start border-r-2 border-gray-600 pr-6">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FD6F00]">
                   5+
@@ -70,7 +105,7 @@ const Banner = () => {
                 </p>
               </div>
 
-              {/* Projects */}
+              
               <div className="flex flex-col items-center md:items-start border-r-2 border-gray-600 pr-6">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FD6F00]">
                   20+
@@ -80,7 +115,7 @@ const Banner = () => {
                 </p>
               </div>
 
-              {/* Clients */}
+              
               <div className="flex flex-col items-center md:items-start">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FD6F00]">
                   80+
@@ -89,7 +124,7 @@ const Banner = () => {
                   Happy Clients
                 </p>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

@@ -10,10 +10,10 @@ const Footer = () => {
   return (
     <Container className="flex flex-col items-center justify-between py-1 gap-10">
       <Image
-        src="/main-logo.png"
+        src="/mainlogo.png"
         alt="logo"
-        width={100}
-        height={100}
+        width={50}
+        height={50}
         className="cursor-pointer"
       />
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4">
@@ -23,7 +23,8 @@ const Footer = () => {
             href={item.href}
             className="px-4 py-2 text-sm sm:text-base text-white font-semibold 
                  rounded-md transition-all duration-200 
-                 hover:text-[#FD6F00] hover:bg-gray-700 cursor-pointer">
+                 hover:text-[#FD6F00] hover:bg-gray-700 cursor-pointer"
+          >
             {item.title}
           </Link>
         ))}
@@ -31,7 +32,8 @@ const Footer = () => {
       <SocialLink />
       <div
         className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-10 
-                border-b border-gray-700 pt-2 pb-10 w-full">
+                border-b border-gray-700 pt-2 pb-10 w-full"
+      >
         {/* Email */}
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center">
           <MdOutlineEmail className="text-gray-400 text-lg sm:text-xl" />

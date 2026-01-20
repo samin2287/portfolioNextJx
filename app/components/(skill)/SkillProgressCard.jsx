@@ -21,12 +21,12 @@ const SkillProgressCard = ({ icon, percentage, title }) => {
   const offset = circumference - (progress / 100) * circumference;
 
   return (
-    <div className="flex flex-col items-center justify-center text-center">
+    <div className="w-full flex flex-col items-center justify-start gap-2 py-6 text-center">
+      {/* Circle */}
       <div className="relative w-24 h-24">
         <svg
           className="w-full h-full transform -rotate-90"
-          viewBox="0 0 100 100"
-        >
+          viewBox="0 0 100 100">
           <circle
             cx="50"
             cy="50"
@@ -54,8 +54,13 @@ const SkillProgressCard = ({ icon, percentage, title }) => {
         </div>
       </div>
 
-      <p className="text-orange-500 font-semibold mt-2">{progress}%</p>
-      <p className="text-gray-300 text-sm">{title}</p>
+      {/* Percentage */}
+      <p className="text-orange-500 font-semibold text-base sm:text-lg">
+        {progress}%
+      </p>
+
+      {/* Title */}
+      <p className="text-gray-300 text-sm sm:text-lg">{title}</p>
     </div>
   );
 };
