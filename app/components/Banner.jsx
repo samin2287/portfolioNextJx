@@ -90,41 +90,6 @@ const Banner = () => {
                 Download CV
               </Button>
             </div>
-            {/* <div
-              className="counter flex flex-row items-center justify-center 
-                gap-6 
-                px-4 md:px-8 py-4 bg-gray-800 rounded-xl"
-            >
-              
-              <div className="flex flex-col items-center md:items-start border-r-2 border-gray-600 pr-6">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FD6F00]">
-                  5+
-                </h2>
-                <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-300">
-                  Experiences
-                </p>
-              </div>
-
-              
-              <div className="flex flex-col items-center md:items-start border-r-2 border-gray-600 pr-6">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FD6F00]">
-                  20+
-                </h2>
-                <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-300">
-                  Projects Done
-                </p>
-              </div>
-
-              
-              <div className="flex flex-col items-center md:items-start">
-                <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#FD6F00]">
-                  80+
-                </h2>
-                <p className="text-xs sm:text-sm md:text-base font-semibold text-gray-300">
-                  Happy Clients
-                </p>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>

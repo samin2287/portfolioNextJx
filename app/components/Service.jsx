@@ -2,6 +2,10 @@ import React from "react";
 import Container from "./Container";
 import { FaFigma, FaReact } from "react-icons/fa6";
 import ServiceCard from "./ServiceCard";
+import { DiResponsive } from "react-icons/di";
+import { MdOutlineIntegrationInstructions } from "react-icons/md";
+import { TbBrandWebflow } from "react-icons/tb";
+
 import "aos/dist/aos.css";
 
 const Service = () => {
@@ -48,16 +52,16 @@ const Service = () => {
             data-aos="fade-up"
             data-aos-duration="1200"
             data-aos-anchor-placement="top-center"
-            Icon={FaFigma}
-            title="UI/UX Design"
-            description="Designing intuitive and modern interfaces with Figma."
+            Icon={DiResponsive}
+            title="Responsive UI Design"
+            description="Design clean, user-friendly, and visually engaging interfaces with Tailwind CSS and Bootstrap."
           />
 
           <ServiceCard
             data-aos="fade-up"
             data-aos-duration="1600"
             data-aos-anchor-placement="top-center"
-            Icon={FaReact}
+            Icon={MdOutlineIntegrationInstructions}
             title="Frontend Integration"
             description="Connecting APIs and ensuring smooth UI interaction."
           />
@@ -84,9 +88,9 @@ const Service = () => {
             data-aos="fade-up"
             data-aos-duration="2800"
             data-aos-anchor-placement="top-center"
-            Icon={FaFigma}
-            title="Prototyping"
-            description="Turning ideas into interactive visual prototypes."
+            Icon={TbBrandWebflow}
+            title="Webflow Design"
+            description="Create professional, no-code websites and prototypes using Webflow for fast and clean production-ready design."
           />
         </div>
       </Container>
