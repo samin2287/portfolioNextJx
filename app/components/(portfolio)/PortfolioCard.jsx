@@ -1,6 +1,6 @@
 import React from "react";
 import CardSideBar from "./CardSideBar";
-
+import Link from "next/link";
 const PortfolioCard = ({ projects }) => {
   return (
     <>
@@ -17,7 +17,18 @@ const PortfolioCard = ({ projects }) => {
 
           {/* Card Content */}
           <div className="p-4">
-            <h3 className="text-lg font-semibold">{project.title}</h3>
+            {/* Mobile tablet Only */}
+            <Link
+              href={project.liveUrl}
+              target="_blank"
+              className="block focus:text-amber-600 active:text-amber-600 md:hidden text-lg font-semibold text-gray-800 ">
+              {project.title}
+            </Link>
+            {/* Desktop Only */}
+            <h3 className="hidden md:block text-lg font-semibold">
+              {project.title}
+            </h3>
+
             <p className="text-sm text-gray-500 capitalize">
               {project.category}
             </p>

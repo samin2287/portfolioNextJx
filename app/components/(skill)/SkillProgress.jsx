@@ -11,23 +11,29 @@ import {
   SiExpress,
   SiNodedotjs,
   SiMongodb,
+  SiWebflow,
 } from "react-icons/si";
 
 const SkillProgress = () => {
   const skills = [
     { icon: <SiHtml5 />, percentage: 90, title: "HTML5" },
-    { icon: <SiCss3 />, percentage: 85, title: "CSS3" },
-    { icon: <SiJavascript />, percentage: 80, title: "JavaScript" },
+    { icon: <SiCss3 />, percentage: 80, title: "CSS3" },
+    { icon: <SiJavascript />, percentage: 60, title: "JavaScript" },
     { icon: <SiBootstrap />, percentage: 60, title: "Bootstrap" },
     { icon: <SiReact />, percentage: 70, title: "React" },
     { icon: <SiTailwindcss />, percentage: 75, title: "Tailwind CSS" },
-    { icon: <SiExpress />, percentage: 70, title: "Express" },
-    { icon: <SiNodedotjs />, percentage: 70, title: "Node.js" },
-    { icon: <SiMongodb />, percentage: 70, title: "MongoDB" },
+    { icon: <SiExpress />, percentage: 50, title: "Express" },
+    { icon: <SiNodedotjs />, percentage: 30, title: "Node.js" },
+    { icon: <SiMongodb />, percentage: 50, title: "MongoDB" },
+    { icon: <SiWebflow />, percentage: 80, title: "Webflow" },
   ];
 
   return (
-    <section id="skills">
+    <section
+      data-aos="fade-zoom-in"
+      data-aos-delay="200"
+      data-aos-offset="0"
+      id="skills">
       <Container className="py-12 sm:py-16 lg:py-20">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold text-center">
           Skills
