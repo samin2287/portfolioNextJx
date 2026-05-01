@@ -8,7 +8,8 @@ const CardSideBar = ({ githubUrl, liveUrl }) => {
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="p-2 border border-gray-200 rounded-md bg-amber-600 shadow hover:bg-amber-500 flex items-center justify-center">
+        className="p-2 border border-gray-200 rounded-md bg-amber-600 shadow hover:bg-amber-500 flex items-center justify-center"
+      >
         <FaGithub className="text-2xl cursor-pointer transition duration-200" />
       </a>
 
@@ -17,11 +18,11 @@ const CardSideBar = ({ githubUrl, liveUrl }) => {
         href={liveUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="p-2 border border-gray-200 rounded-md bg-amber-600 shadow hover:bg-amber-500 flex items-center justify-center">
+        className="p-2 border border-gray-200 rounded-md bg-amber-600 shadow hover:bg-amber-500 flex items-center justify-center"
+      >
         <FaLink className="text-2xl cursor-pointer transition duration-200" />
       </a>
     </div>
   );
 };
-
 export default CardSideBar;

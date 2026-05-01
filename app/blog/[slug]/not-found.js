@@ -15,14 +15,12 @@ export default function NotFound() {
           </p>
           <Link
             href="/#blog"
-            className="inline-flex items-center gap-2 border border-gray-600 px-6 py-3 rounded-md text-white font-semibold hover:bg-amber-600 hover:border-amber-600 transition-all duration-300"
-          >
+            className="inline-flex items-center gap-2 border border-gray-600 px-6 py-3 rounded-md text-white font-semibold hover:bg-amber-600 hover:border-amber-600 transition-all duration-300">
             <svg
               className="w-5 h-5"
               fill="none"
               stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+              viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"

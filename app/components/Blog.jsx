@@ -18,7 +18,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <section data-aos="zoom-out-up" id="blog" className="py-16 sm:py-20">
+    <section id="blog" className="py-16 sm:py-20">
       <Container>
         <div className="text-center mb-10 space-y-3">
           <h2 className="text-5xl font-bold text-white">From the Blog</h2>
@@ -57,19 +57,19 @@ const Blog = () => {
                     href={`/blog/${post.slug}`}
                     onClick={handleClick}
                     className={`
-                      mt-3 text-2xl font-bold transition-colors
+                      mt-3 text-2xl font-bold transition-colors break-words
                       ${isActive ? "text-amber-500" : "text-white"}
                       active:text-amber-500 focus:text-amber-500
                       group-hover:text-amber-400
                     `}>
                     {post.title}
                   </Link>
-                  <p className="mt-3 text-gray-300 leading-relaxed text-sm sm:text-base grow">
+                  <p className="mt-3 text-gray-300 leading-relaxed text-sm sm:text-base grow break-words">
                     {post.summary}
                   </p>
                   <Button
                     href={`/blog/${post.slug}`}
-                    className="mt-6 px-4 py-2 text-sm sm:text-base border-gray-600 hover:border-amber-500">
+                    className="mt-6 px-4 py-2 text-sm sm:text-base flex items-center justify-center border-gray-600 hover:border-amber-500">
                     Read More
                   </Button>
                 </div>

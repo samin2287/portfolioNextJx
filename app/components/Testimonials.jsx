@@ -29,7 +29,8 @@ const Testimonials = () => {
         <div className="text-center mb-10 space-y-3">
           <h2 className="text-5xl font-bold text-white">Testimonials</h2>
           <p className="text-gray-400 text-base sm:text-lg">
-            Proof from partners who shipped with me on tight timelines and high stakes.
+            Proof from partners who shipped with me on tight timelines and high
+            stakes.
           </p>
         </div>
 

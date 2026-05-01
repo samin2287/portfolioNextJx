@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 const AOSWrapper = ({ children }) => {
   useEffect(() => {
     AOS.init({
-      once: false,
+      once: true,
       easing: "ease-in-out",
     });
   }, []);
