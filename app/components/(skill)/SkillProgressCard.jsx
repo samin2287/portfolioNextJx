@@ -1,27 +1,65 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 const SkillProgressCard = ({ icon, percentage, title }) => {
   const [progress, setProgress] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const cardRef = useRef(null);
 
   useEffect(() => {
+    if (!cardRef.current) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      const timer = setTimeout(() => setIsVisible(true), 0);
+      return () => clearTimeout(timer);
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    observer.observe(cardRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let current = 0;
+    const stepTime = Math.max(12, Math.floor(1000 / (percentage || 1)));
+
     const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev < percentage) return prev + 1;
+      current += 1;
+      if (current >= percentage) {
+        setProgress(percentage);
         clearInterval(timer);
-        return percentage;
-      });
-    }, 15);
+      } else {
+        setProgress(current);
+      }
+    }, stepTime);
+
     return () => clearInterval(timer);
-  }, [percentage]);
+  }, [isVisible, percentage]);
 
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (progress / 100) * circumference;
 
   return (
-    <div className="w-full flex flex-col items-center justify-start gap-2 py-6 text-center">
+    <div
+      ref={cardRef}
+      className="w-full flex flex-col items-center justify-start gap-2 py-6 text-center">
       {/* Circle */}
       <div className="relative w-24 h-24">
         <svg

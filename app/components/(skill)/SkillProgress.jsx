@@ -13,17 +13,19 @@ import {
   SiMongodb,
   SiWebflow,
 } from "react-icons/si";
+import { DiPostgresql } from "react-icons/di";
 
 const SkillProgress = () => {
   const skills = [
     { icon: <SiHtml5 />, percentage: 90, title: "HTML5" },
     { icon: <SiCss3 />, percentage: 80, title: "CSS3" },
-    { icon: <SiJavascript />, percentage: 60, title: "JavaScript" },
-    { icon: <SiBootstrap />, percentage: 60, title: "Bootstrap" },
-    { icon: <SiReact />, percentage: 70, title: "React" },
+    { icon: <SiJavascript />, percentage: 70, title: "JavaScript" },
+    { icon: <DiPostgresql />, percentage: 80, title: "PostgreSQL" },
+    { icon: <SiBootstrap />, percentage: 70, title: "Bootstrap" },
+    { icon: <SiReact />, percentage: 80, title: "React" },
     { icon: <SiTailwindcss />, percentage: 75, title: "Tailwind CSS" },
     { icon: <SiExpress />, percentage: 50, title: "Express" },
-    { icon: <SiNodedotjs />, percentage: 30, title: "Node.js" },
+    { icon: <SiNodedotjs />, percentage: 60, title: "Node.js" },
     { icon: <SiMongodb />, percentage: 50, title: "MongoDB" },
     { icon: <SiWebflow />, percentage: 80, title: "Webflow" },
   ];
@@ -39,10 +41,8 @@ const SkillProgress = () => {
           Skills
         </h2>
 
-        <p className="text-gray-400 text-center leading-6 py-4 sm:py-5 text-sm sm:text-base">
-          Lorem ipsum dolor sit amet consectetur. Imperdiet convallis{" "}
-          <br className="hidden sm:block" />
-          blandit felis ligula aliquam
+        <p className="text-gray-400 text-center leading-6 py-4 sm:py-5 text-sm sm:text-base max-w-2xl mx-auto">
+          Proficiency and practical experience across core frontend technologies, frameworks, and web tools.
         </p>
 
         {/* Responsive Grid */}

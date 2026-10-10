@@ -3,7 +3,6 @@ import Container from "./Container";
 import SocialLink from "./SocialLink";
 import Button from "./Button";
 import Image from "next/image";
-import "aos/dist/aos.css";
 
 const Banner = () => {
   return (
@@ -12,7 +11,7 @@ const Banner = () => {
         <div className="flex flex-col lg:grid lg:grid-cols-9 gap-4 lg:gap-4">
           <div
             data-aos="fade-up"
-            data-aos-duration="1000"
+            data-aos-duration="700"
             className="order-1 lg:order-2 lg:col-span-5 lg:col-start-5 pt-8 lg:pt-20 flex justify-center lg:justify-end items-center">
             <div className="home-img flex justify-center items-center">
               <div className="img-box p-2 md:p-3 lg:p-4">
@@ -32,24 +31,24 @@ const Banner = () => {
 
           <div
             data-aos="fade-up"
-            data-aos-duration="3000"
+            data-aos-duration="700"
             className=" home-info  order-2 lg:order-1 lg:col-span-4 mt-4 lg:mt-20 text-center lg:text-left">
             <h3 className="font-semibold uppercase text-xl sm:text-2xl lg:text-4xl text-gray-400 pt-2 lg:pt-3 pb-3 lg:pb-5">
               Zubayer Mahmud Samin
             </h3>
 
             <h2 className="text-3xl md:text-4xl text-gray-400 font-bold">
-              I'm a <br />
+              I&apos;m a <br />
               <span style={{ "--i": 4 }} data-text="Frontend Developer">
                 Frontend Developer
               </span>
-              <span style={{ "--i": 3 }} data-text="Web Designer">
+              <span style={{ "--i": 1 }} data-text="Web Designer">
                 Web Designer
               </span>
-              <span style={{ "--i": 2 }} data-text="You Tuber">
-                You Tuber
+              <span style={{ "--i": 3 }} data-text="Backend Developer">
+                Backend Developer
               </span>
-              <span style={{ "--i": 1 }} data-text="Blogger">
+              <span style={{ "--i": 2 }} data-text="Blogger">
                 Blogger
               </span>
             </h2>
@@ -66,6 +65,7 @@ const Banner = () => {
     pb-10
   ">
               <Button
+                href="#contact"
                 className="
       px-5 sm:px-6 md:px-8 
       bg-[#FD6F00] text-white 
@@ -78,6 +78,10 @@ const Banner = () => {
               </Button>
 
               <Button
+                href="https://drive.google.com/file/d/1PTYnuO-ks4EVe_wdok-n0k4g8ZeI2ev6/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Download Zubayer Mahmud Samin's CV"
                 className="
       px-5 sm:px-6 md:px-8 
       border border-[#FD6F00] 

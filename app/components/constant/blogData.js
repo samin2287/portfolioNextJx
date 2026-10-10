@@ -4,6 +4,7 @@ export const blogPosts = [
     title: "Designing With Intent: A Frontend Workflow",
     date: "Oct 12, 2025",
     readTime: "6 min read",
+    category: "UI/UX & Frontend",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
     summary:
@@ -34,6 +35,7 @@ export const blogPosts = [
     title: "Micro-Interactions That Matter",
     date: "Sep 28, 2025",
     readTime: "4 min read",
+    category: "Animation & Motion",
     image:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop",
     summary:
@@ -59,6 +61,7 @@ export const blogPosts = [
     title: "Keeping Next.js Sites Fast On Any Device",
     date: "Sep 9, 2025",
     readTime: "7 min read",
+    category: "Next.js & Performance",
     image:
       "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
     summary:

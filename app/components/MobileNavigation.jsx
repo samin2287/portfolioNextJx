@@ -4,19 +4,27 @@ import React, { useState } from "react";
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { navItems } from "./constant";
 import SocialLink from "./SocialLink";
 
 const MobileNavigation = ({ activeSection }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
-  const openMenu = () => setIsOpen(true);
   const closeMenu = () => setIsOpen(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const handleClick = (e, href) => {
-    e.preventDefault();
     closeMenu();
+    if (pathname !== "/") {
+      e.preventDefault();
+      router.push(`/${href}`);
+      return;
+    }
+
+    e.preventDefault();
     const targetId = href.replace("#", "");
     const targetElement = document.getElementById(targetId);
 
@@ -63,7 +71,7 @@ const MobileNavigation = ({ activeSection }) => {
               {navItems.map((item) => (
                 <Link
                   key={item.title}
-                  href={item.href}
+                  href={`/${item.href}`}
                   onClick={(e) => handleClick(e, item.href)}
                   className={`flex items-center gap-2 relative group py-3 px-4 text-sm text-white font-semibold hover:text-amber-500 transition-all duration-100 ${
                     activeSection === item.href ? "text-amber-500" : ""

@@ -1,14 +1,31 @@
 "use client";
 import React from "react";
-import * as Icons from "react-icons/fa6";
+import {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaWhatsapp,
+  FaXTwitter,
+  FaInstagram,
+} from "react-icons/fa6";
 import Link from "next/link";
 import { socialLink } from "./constant";
+
+const iconMap = {
+  FaFacebookF,
+  FaLinkedinIn,
+  FaGithub,
+  FaWhatsapp,
+  FaXTwitter,
+  FaInstagram,
+};
 
 const SocialLink = () => {
   return (
     <div className="flex items-center gap-3 sm:gap-4 mt-4">
       {socialLink.map(({ id, name, url, icon }) => {
-        const Icon = Icons[icon];
+        const Icon = iconMap[icon];
+        if (!Icon) return null;
         return (
           <Link
             key={id}
@@ -16,6 +33,7 @@ const SocialLink = () => {
             target="_blank"
             rel="noopener noreferrer"
             title={name}
+            aria-label={name}
             className="
               group relative 
               w-10 h-10 
