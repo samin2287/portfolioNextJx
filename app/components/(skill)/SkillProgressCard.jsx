@@ -1,104 +1,44 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 
-const SkillProgressCard = ({ icon, percentage, title }) => {
-  const [progress, setProgress] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const cardRef = useRef(null);
-
-  useEffect(() => {
-    if (!cardRef.current) return;
-
-    if (typeof IntersectionObserver === "undefined") {
-      const timer = setTimeout(() => setIsVisible(true), 0);
-      return () => clearTimeout(timer);
-    }
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.15 }
-    );
-
-    observer.observe(cardRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
-    if (!isVisible) return;
-
-    let current = 0;
-    const stepTime = Math.max(12, Math.floor(1000 / (percentage || 1)));
-
-    const timer = setInterval(() => {
-      current += 1;
-      if (current >= percentage) {
-        setProgress(percentage);
-        clearInterval(timer);
-      } else {
-        setProgress(current);
-      }
-    }, stepTime);
-
-    return () => clearInterval(timer);
-  }, [isVisible, percentage]);
-
-  const radius = 40;
-  const circumference = 2 * Math.PI * radius;
-  const offset = circumference - (progress / 100) * circumference;
-
+const SkillProgressCard = ({ icon, badge, title, subtitle, tags }) => {
   return (
     <div
-      ref={cardRef}
-      className="w-full flex flex-col items-center justify-start gap-2 py-6 text-center">
-      {/* Circle */}
-      <div className="relative w-24 h-24">
-        <svg
-          className="w-full h-full transform -rotate-90"
-          viewBox="0 0 100 100">
-          <circle
-            cx="50"
-            cy="50"
-            r={radius}
-            stroke="#333"
-            strokeWidth="10"
-            fill="none"
-          />
-          <circle
-            cx="50"
-            cy="50"
-            r={radius}
-            stroke="#f97316"
-            strokeWidth="10"
-            strokeLinecap="round"
-            fill="none"
-            strokeDasharray={circumference}
-            strokeDashoffset={offset}
-            className="transition-all duration-300 ease-out"
-          />
-        </svg>
-
-        <div className="absolute inset-0 flex items-center justify-center text-3xl text-white">
-          {icon}
+      data-aos="fade-up"
+      className="group relative flex flex-col justify-between rounded-2xl border border-gray-800/80 bg-[#121622]/80 p-5 sm:p-6 transition-all duration-300 hover:-translate-y-1 hover:border-amber-500/50 hover:bg-[#151928] hover:shadow-xl hover:shadow-black/60"
+    >
+      <div>
+        {/* Top: Icon & Badge */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="text-2xl sm:text-3xl text-[#FD6F00] transition-transform duration-300 group-hover:scale-110">
+            {icon}
+          </div>
+          <span className="text-[10px] sm:text-xs font-semibold font-mono tracking-wider uppercase px-2 py-0.5 rounded text-amber-500 bg-amber-500/10 border border-amber-500/25">
+            {badge}
+          </span>
         </div>
+
+        {/* Title & Subtitle */}
+        <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-amber-400 transition-colors">
+          {title}
+        </h3>
+        <p className="text-xs text-gray-400 font-mono mt-0.5">
+          {subtitle}
+        </p>
       </div>
 
-      {/* Percentage */}
-      <p className="text-orange-500 font-semibold text-base sm:text-lg">
-        {progress}%
-      </p>
-
-      {/* Title */}
-      <p className="text-gray-300 text-sm sm:text-lg">{title}</p>
+      {/* Bottom Tags */}
+      <div className="flex flex-wrap items-center gap-1.5 mt-5 pt-3 border-t border-gray-800/80">
+        {tags?.map((tag) => (
+          <span
+            key={tag}
+            className="text-[11px] font-mono text-gray-400 bg-gray-900/90 px-2 py-0.5 rounded border border-gray-800"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
     </div>
   );
 };

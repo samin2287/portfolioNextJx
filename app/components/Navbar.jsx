@@ -24,7 +24,7 @@ const Navbar = () => {
       }
 
       const sections = navItems.map((item) => item.href.replace("#", ""));
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
@@ -82,56 +82,75 @@ const Navbar = () => {
     <nav
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
         isScrolled
-          ? "bg-gray-900/90 backdrop-blur-md shadow-lg shadow-black/25 border-b border-gray-800/80"
-          : "bg-gray-900/95"
+          ? "bg-gray-950/90 backdrop-blur-md shadow-lg shadow-black/30 border-b border-gray-800/80"
+          : "bg-gray-950/95"
       }`}
     >
       <Container
-        className={`flex items-center justify-between px-2 sm:px-4 transition-all duration-300 ${
-          isScrolled ? "py-1.5 sm:py-2" : "py-2.5 sm:py-3.5"
+        className={`flex items-center justify-between px-3 sm:px-6 transition-all duration-300 ${
+          isScrolled ? "py-2 sm:py-2.5" : "py-3.5 sm:py-4"
         }`}
       >
+        {/* Brand Logo & Name */}
         <Link
           href="/"
           aria-label="Homepage"
-          className="shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-18 lg:h-18 relative block cursor-pointer transition-transform duration-200 hover:scale-105"
+          className="flex items-center gap-3 shrink-0 cursor-pointer transition-transform duration-200 hover:scale-105"
         >
-          <Image
-            src="/mainlogo.png"
-            alt="logo"
-            width={50}
-            height={50}
-            className="object-contain w-full h-full"
-          />
+          <div className="relative w-9 h-9 sm:w-10 sm:h-10 shrink-0">
+            <Image
+              src="/mainlogo.png"
+              alt="logo"
+              width={40}
+              height={40}
+              priority
+              className="object-contain w-full h-full"
+            />
+          </div>
+          <div className="flex flex-col text-left leading-tight">
+            <span className="text-white font-bold text-sm sm:text-base tracking-tight">
+              Zubayer
+            </span>
+            <span className="text-white font-bold text-sm sm:text-base tracking-tight">
+              Samin
+            </span>
+          </div>
         </Link>
 
-        <div className="hidden md:flex gap-2 lg:gap-2 items-center flex-1 justify-center">
-          {navItems.map((item) => (
-            <Link
-              key={item.title}
-              href={`/${item.href}`}
-              onClick={(e) => handleClick(e, item.href)}
-              className={`block py-2 px-2 lg:px-4 text-md lg:text-md font-semibold transition-all duration-200 whitespace-nowrap ${
-                activeSection === item.href
-                  ? "text-amber-500 rounded-md bg-amber-500/15 border border-amber-500/30"
-                  : "text-amber-600 hover:text-[#FD6F00] hover:rounded-md hover:bg-gray-700"
-              }`}
-            >
-              {item.title}
-            </Link>
-          ))}
+        {/* Center Nav Items with Pill Active State */}
+        <div className="hidden lg:flex items-center gap-1 xl:gap-2 justify-center flex-1 px-4">
+          {navItems.map((item) => {
+            const isActive = activeSection === item.href;
+            return (
+              <Link
+                key={item.title}
+                href={`/${item.href}`}
+                onClick={(e) => handleClick(e, item.href)}
+                className={`px-3.5 py-1.5 text-sm font-medium transition-all duration-200 whitespace-nowrap rounded-full ${
+                  isActive
+                    ? "bg-[#FD6F00] text-white shadow-md shadow-orange-500/25"
+                    : "text-gray-300 hover:text-white hover:bg-gray-800/40"
+                }`}
+              >
+                {item.title}
+              </Link>
+            );
+          })}
         </div>
-        <div className="hidden md:flex items-center gap-2 lg:gap-4">
+
+        {/* Right CTA Button (Desktop - Circle removed as instructed) */}
+        <div className="hidden lg:flex items-center">
           <Link
             href="/#contact"
             onClick={handleHireMe}
-            className="bg-amber-600 px-3 lg:px-4 border-2 border-transparent transition-all duration-200 text-lg lg:text-md py-2 hover:border-2 hover:border-amber-600 hover:bg-gray-800 rounded-md cursor-pointer text-white font-semibold whitespace-nowrap"
+            className="bg-[#FD6F00] hover:bg-[#e06200] text-white px-5 py-2 rounded-full font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-orange-500/25 active:scale-95 whitespace-nowrap cursor-pointer"
           >
-            Hire me
+            Hire Me
           </Link>
         </div>
 
-        <div data-aos="zoom-in" className="md:hidden flex items-center">
+        {/* Mobile Navigation (Mobile / Tablet only) */}
+        <div data-aos="zoom-in" className="lg:hidden flex items-center">
           <MobileNavigation activeSection={activeSection} />
         </div>
       </Container>

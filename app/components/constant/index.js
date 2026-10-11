@@ -1,10 +1,12 @@
 export const navItems = [
   { title: "Home", href: "#home" },
   { title: "Services", href: "#services" },
-  { title: "About me", href: "#about" },
+  { title: "About", href: "#about" },
   { title: "Experience", href: "#experience" },
   { title: "Skills", href: "#skills" },
   { title: "Portfolio", href: "#portfolio" },
+  { title: "Testimonials", href: "#testimonials" },
+  { title: "FAQ", href: "#faq" },
   { title: "Blog", href: "#blog" },
 ];
 

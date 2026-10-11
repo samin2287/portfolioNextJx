@@ -1,72 +1,71 @@
+"use client";
+
 import React from "react";
 import Container from "./Container";
 import Image from "next/image";
-import { navItems } from "./constant";
 import Link from "next/link";
-import SocialLink from "./SocialLink";
-import { MdOutlineCall, MdOutlineEmail } from "react-icons/md";
+import { usePathname, useRouter } from "next/navigation";
 
 const Footer = () => {
-  // Configurable email - replace with your actual email address
-  const contactEmail = "zubayersamin210@gmail.com";
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleContactClick = (e) => {
+    if (pathname !== "/") {
+      e.preventDefault();
+      router.push("/#contact");
+      return;
+    }
+
+    e.preventDefault();
+    const targetElement = document.getElementById("contact");
+    if (targetElement) {
+      const offsetTop = targetElement.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
-    <Container className="flex flex-col items-center justify-between py-1 gap-10">
-      <Link href="/" aria-label="Go to homepage">
-        <Image
-          src="/mainlogo.png"
-          alt="logo"
-          width={50}
-          height={50}
-          className="cursor-pointer"
-        />
-      </Link>
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-4">
-        {navItems.map((item) => (
+    <footer className="w-full border-t border-gray-800/80 bg-gray-950/80 py-6 sm:py-7">
+      <Container className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+        {/* Left: Brand Icon + Copyright */}
+        <div className="flex items-center gap-3">
           <Link
-            key={item.title}
-            href={`/${item.href}`}
-            className="px-4 py-2 text-sm sm:text-base text-white font-semibold 
-                 rounded-md transition-all duration-200 
-                 hover:text-[#FD6F00] hover:bg-gray-700 cursor-pointer"
+            href="/"
+            aria-label="Go to homepage"
+            className="shrink-0 transition-transform duration-200 hover:scale-110"
           >
-            {item.title}
+            <Image
+              src="/mainlogo.png"
+              alt="logo"
+              width={24}
+              height={24}
+              className="object-contain w-5 h-5 sm:w-6 sm:h-6"
+            />
           </Link>
-        ))}
-      </div>
-      <SocialLink />
-      <div
-        className="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-10 
-                border-b border-gray-700 pt-2 pb-10 w-full"
-      >
-        {/* Email */}
-        <a
-          href={`mailto:${contactEmail}`}
-          className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center hover:text-amber-500 transition-colors"
-        >
-          <MdOutlineEmail className="text-gray-400 text-lg sm:text-xl" />
-          <p className="text-gray-400 text-sm sm:text-base text-center sm:text-left leading-6">
-            {contactEmail}
+          <p className="text-gray-400 font-mono tracking-tight text-center sm:text-left">
+            © {new Date().getFullYear()} Zubayer Mahmud Samin. All rights reserved.
           </p>
-        </a>
+        </div>
 
-        {/* Call / WhatsApp */}
-        <a
-          href="https://wa.me/+8801640916341"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center items-center hover:text-amber-500 transition-colors"
-        >
-          <MdOutlineCall className="text-gray-400 text-lg sm:text-xl" />
-          <p className="text-gray-400 text-sm sm:text-base text-center sm:text-left leading-6">
-            +880 1640 916341
-          </p>
-        </a>
-      </div>
-      <p className="text-gray-400 text-center leading-6 pb-5">
-        © {new Date().getFullYear()} Zubayer Mahmud Samin. All rights reserved.
-      </p>
-    </Container>
+        {/* Right: Tagline + Contact Link */}
+        <div className="flex items-center gap-4 sm:gap-6 font-mono">
+          <span className="text-[#FD6F00] text-[11px] sm:text-xs font-semibold tracking-wider uppercase">
+            CRAFTING DIGITAL EXPERIENCES
+          </span>
+          <Link
+            href="/#contact"
+            onClick={handleContactClick}
+            className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
+          >
+            Contact
+          </Link>
+        </div>
+      </Container>
+    </footer>
   );
 };
 
